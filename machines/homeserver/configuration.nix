@@ -29,13 +29,8 @@
 
   networking = {
     hostName = "homeserver";
+    nameservers = [ "1.1.1.1" "1.0.0.1" ];
     tempAddresses = "disabled";
-    firewall = {
-      allowedTCPPorts = [
-        80 # http
-        443 # https
-      ];
-    };
   };
 
   # Configure console keymap

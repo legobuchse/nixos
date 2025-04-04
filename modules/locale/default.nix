@@ -6,19 +6,12 @@ in
 
   options.simon.locale = {
     enable = mkEnableOption "activate locale";
-    hardwareClockInLocalTime = mkOption {
-      type = types.bool;
-      default = false;
-    };
   };
 
   config = mkIf cfg.enable {
 
     # Set your time zone.
-    time = {
-      timeZone = "Europe/Berlin";
-      hardwareClockInLocalTime = cfg.hardwareClockInLocalTime;
-    };
+    time.timeZone = "Europe/Berlin";
 
     # Select internationalisation properties.
     i18n.defaultLocale = "en_US.UTF-8";
