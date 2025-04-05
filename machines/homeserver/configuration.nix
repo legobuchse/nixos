@@ -7,7 +7,7 @@
     common-server.enable = true;
     systemd-boot.enable = true;
 
-    nginx.enable = true;
+    #nginx.enable = true;
     #nginx.enableGeoIP = true;
 
     # Exposed Services
